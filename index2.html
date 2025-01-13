@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>SprayFly - Productos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/productos.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #1bca1b;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #138a13;
+        }
+
+        #carrito {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+
+        #carrito h3 {
+            margin-top: 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="contenedor" style="display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex; align-items: center;">
+                <img src="sprayfly.png" alt="Logotipo SprayFly" style="height: 50px; width: 50px; border-radius: 50%; margin-right: 10px;">
+                <h1 class="icon-bug">SprayFly</h1>
+            </div>
+            <input type="checkbox" id="menu-bar">
+            <label class="icon-menu" for="menu-bar"></label>
+            <nav class="menu">
+                <a href="index.html">Inicio</a>
+                <a href="index2.html">Productos</a>
+                <a href="index3.html">Publicidad Y Promociones</a>
+                <a href="index4.html">Sobre Nosotros</a> 
+                <a href="index2 ingles.html">English</a> 
+            </nav>
+        </div>
+    </header>
+    
+<main>
+    <section id="banner">
+        <img src="banner3.jpg" alt="Banner SprayFly">
+        <div class="contenedor">
+            <h2>Eliminamos plagas de manera ecológica y segura para tu hogar</h2>
+            <p>El mejor repelente contra insectos</p>
+            <a href="index3.html">Leer más</a>
+        </div>
+    </section>
+
+    <section id="productos">
+        <h2>Productos Destacados</h2>
+        <article>
+            <div class="producto-imagen">
+                <img src="producto sprayfly.png" alt="SprayFly Repelente Ecológico">
+            </div>
+            <div class="producto-info">
+                <h4>SprayFly Repelente Ecológico</h4>
+                <p>Protege tu hogar y tu familia con nuestro repelente natural contra moscas y otros insectos. 100% seguro y amigable con el medio ambiente.</p>
+                <button class="cta-button" onclick="agregarAlCarrito()">Comprar ahora</button>
+            </div>
+        </article>
+    </section>
+
+    <section id="carrito">
+        <h3>Carrito de Compras</h3>
+        <p id="cantidad">Cantidad: 0</p>
+        <p id="subtotal">Subtotal: $0.00</p>
+        <p id="descuento">Descuento: $0.00</p>
+        <p id="total">Total: $0.00</p>
+    </section>
+
+    <section id="promociones">
+        <h2>Promociones</h2>
+        <ul>
+            <li><strong>Descuento de lanzamiento:</strong> Obtén un 15% de descuento en tu primera compra de SprayFly.</li>
+            <li><strong>Paquete familiar:</strong> Compra 4 unidades y recibe un 25% de descuento en el total.</li>
+            <li><strong>Envío gratuito:</strong> Disfruta de envío gratuito en pedidos mayores a $50.</li>
+        </ul>
+    </section>
+</main>
+
+<footer>
+    <div class="contenedor">
+        <p class="copy">SprayFly &copy; 2025</p>
+        <div class="sociales">
+        <a class="icon-google" href="https://www.hugedomains.com/domain_profile.cfm?d=sprayfly.com"></a>
+        <a class="icon-twitter" href="https://x.com/sprayflyy?s=11"></a>
+        <a class="icon-instagram" href="https://www.instagram.com/spray.fly/"></a>
+        </div>
+    </div>
+    
+</footer>
+<script>
+    let cantidad = 0;
+    let precioUnitario = 70; // Precio actualizado por unidad
+    let descuento15 = 0.15;
+    let descuento25 = 0.25;
+
+    function calcularTotal() {
+        let subtotal = cantidad * precioUnitario;
+        let descuento = 0;
+
+        // Aplicar descuentos
+        if (cantidad === 1) {
+            descuento = subtotal * descuento15; // 15% en la primera compra
+        } else if (cantidad >= 4) {
+            descuento = subtotal * descuento25; // 25% si compras 4 o más
+        }
+
+        let total = subtotal - descuento;
+
+        // Actualizar el carrito
+        document.getElementById('cantidad').textContent = `Cantidad: ${cantidad}`;
+        document.getElementById('subtotal').textContent = `Subtotal: $${subtotal.toFixed(2)}`;
+        document.getElementById('descuento').textContent = `Descuento: $${descuento.toFixed(2)}`;
+        document.getElementById('total').textContent = `Total: $${total.toFixed(2)}`;
+    }
+
+    function agregarAlCarrito() {
+        cantidad++;
+        calcularTotal();
+    }
+</script>
+</body>
+</html>

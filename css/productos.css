@@ -1,0 +1,62 @@
+#productos {
+    padding: 20px;
+    text-align: left; /* Alinea el texto a la izquierda */
+    margin-left: 0; /* Elimina márgenes adicionales */
+    background-color: #f4f4f4; /* Mantiene el color de fondo */
+    border-radius: 10px; /* Bordes redondeados */
+    border: 2px solid #ccc; /* Borde gris alrededor de la sección */
+    margin-top: 20px; /* Espacio superior */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+#productos h2 {
+    margin-bottom: 20px; /* Espacio debajo del título */
+    font-size: 24px; /* Tamaño del título */
+    color: #333; /* Color del texto */
+    text-align: left; /* Alinea el título a la izquierda */
+}
+
+#productos article {
+    display: flex; /* Usa flexbox para alinear la imagen y el texto horizontalmente */
+    flex-direction: row; /* Alinea los elementos en fila */
+    gap: 20px; /* Espacio entre la imagen y el contenido */
+    align-items: center; /* Alinea los elementos verticalmente */
+}
+
+.producto-imagen img {
+    max-width: 200px; /* Controla el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 10px; /* Bordes redondeados en la imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave alrededor de la imagen */
+}
+
+.producto-info {
+    max-width: 400px; /* Limita el tamaño del contenedor de la información */
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #1bca1b;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px; /* Espacio entre el texto y el botón */
+}
+
+.cta-button:hover {
+    background-color: #159615;
+}
+#producto article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+}

@@ -1,0 +1,407 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(menu.css);
+@import url(banner.css);
+@import url(Blog.css);
+@import url(info.css);
+@import url(java.js);
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+header{
+    width: 100%;
+    height: 50px;
+    background: #333;
+    color: #fff;
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.contenedor {
+    width: 98%;
+    margin: auto;
+}
+
+h1 {
+    float: left;
+}
+header .contenedor {
+    display: table;
+}
+section {
+    width: 100%;
+    margin-bottom: 25px;
+}
+#Bienvenidos {
+    text-align: center;
+}
+#informacion {
+    text-align: center;
+}
+footer .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+.copy {
+    font-size: 20px;
+}
+.sociales {
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+}
+.sociales a {
+    color: #333;
+    text-decoration: none;
+}
+
+@media (min-width:768px) {
+.sociales{
+    width: auto;
+}
+footer .contenedor{
+    justify-content: space-between;
+}
+}
+
+
+
+@media (min-width:1024px) {
+    .contenedor {
+        width: 1000px;
+    }
+}
+#producto-destacado {
+    margin-top: 20px;
+    text-align: left;
+}
+#producto-destacado h2 {
+    margin-bottom: 20px;
+}
+#producto-destacado article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 200px; 
+}
+#producto-destacado img {
+    margin-bottom: 10px;
+    width: 100%; 
+}
+footer {
+    background-color: #333; 
+    color: white; 
+    padding: 20px 0; 
+    text-align: center; 
+}
+
+footer .contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .sociales {
+    margin-top: 10px;
+}
+
+footer .sociales a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.cta-button {
+    background-color: #28a745; 
+    color: white; 
+    padding: 10px 20px; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    text-align: center; 
+    display: inline-block; 
+    transition: background-color 0.3s ease; 
+}
+
+.cta-button:hover {
+    background-color: #218838; 
+}
+
+.promo-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.promo-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.promo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.promo-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.promo-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.promo-card ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.promo-card li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.promo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .sociales a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+#Bienvenidos p, #informacion p {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.blog-grid article {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.blog-grid article img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.blog-grid article:hover {
+    transform: translateY(-5px);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer .contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .sociales a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+
+#beneficios article img {
+    width: 50%;  
+    height: 50%; 
+    max-width: 100%; 
+    border-radius: 10px; 
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+#producto-destacado {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+#producto-destacado h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #333; 
+}
+
+#producto-destacado article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+}
+.cta-button {
+    background-color: #27ae60; 
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #2ecc71;
+}
+
+
+#promociones {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+#promociones h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; 
+}
+
+#promociones ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+#promociones li {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333; 
+}
+
+
+#donde-comprar {
+    padding: 40px 20px;
+    background-color: #fff;
+}
+
+#donde-comprar h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; 
+}
+
+#donde-comprar ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+#donde-comprar li {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333; 
+}
+
+#donde-comprar a {
+    color: #27ae60; 
+    text-decoration: none;
+}
+
+#donde-comprar a:hover {
+    text-decoration: underline;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+footer .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .sociales a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+#menu-bar {
+    display: none;
+}

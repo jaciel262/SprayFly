@@ -1,0 +1,75 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+    overflow: hidden; /* Evitar desplazamiento */
+}
+
+#hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+#hero video {
+    position: fixed; /* Cambié a fixed */
+    top: 0;
+    left: 0;
+    width: 100vw; /* Usamos vw para asegurar que cubra el ancho de la ventana */
+    height: 100vh; /* Usamos vh para asegurar que cubra la altura de la ventana */
+    object-fit: cover;
+    z-index: -1; /* Colocamos el video debajo de los demás elementos */
+}
+
+.capa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Capa oscura para mejorar legibilidad */
+    z-index: 2;
+}
+
+.promo {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.promo h1 {
+    font-size: 3rem;
+    font-family: 'Kanit', sans-serif;
+    margin-bottom: 20px;
+}
+
+.promo p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.promo button {
+    background-color: #00ff158f;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.promo button:hover {
+    background-color: #00ff152f;
+}
